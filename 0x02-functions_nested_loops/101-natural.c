@@ -1,23 +1,23 @@
 #include <stdio.h>
+
 /**
- * main - main block
- * Description: computes and prints even  number < 4000000
- * 5 below 1024 (excluded), followed by a new line
- * Return: 0
+ * main - Prints the sum of all multiples of 3 or 5 up to 102
+ * Return: Always (Success)
  */
 int main(void)
 {
-	int a = 0, b = 1, next = 0;
-	int sum = 0;
+	int i, z = 0;
 
-	while (next < 4000000)
+	while (i < 1024)
 	{
-		next = a + b;
-		a = b;
-		b = next;
-		if (next % 2 == 0)
-			sum += next;
+		if ((i % 3 == 0) || (i % 5 == 0))
+		{
+			z += i;
+		}
+
+		i++;
 	}
-	printf("%i\n", sum);
+
+	printf("%d\n", z);
 	return (0);
 }
